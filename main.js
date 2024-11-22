@@ -18,6 +18,8 @@ let acceptData = () => {
     createPost();
 }
 
+// CREATE
+
 let createPost = () => {
     posts.innerHTML += `
   <div>
@@ -32,8 +34,19 @@ let createPost = () => {
 
 }
 
+// DELETE
+
 let deletePost = (e) => {
     e.parentElement.parentElement.remove();
+}
+
+// EDIT 
+
+let editPost = (e) => {
+    input.value = e.parentElement.previousElementSibling.innerHTML;
+    e.parentElement.parentElement.remove();
+    console.log("edited")
+
 }
 
 
